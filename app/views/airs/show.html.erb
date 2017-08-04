@@ -1,0 +1,113 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag @air.image.url(:medium) %>
+</p>
+
+<p>
+  <strong>Room name:</strong>
+  <%= @air.room_name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @air.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @air.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @air.price %>
+</p>
+
+<p>
+  <strong>Accomodation:</strong>
+  <%= @air.accomodation %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @air.bathrooms %>
+</p>
+
+<p>
+  <strong>Bedrooms:</strong>
+  <%= @air.bedrooms %>
+</p>
+
+<p>
+  <strong>Beds:</strong>
+  <%= @air.beds %>
+</p>
+
+<p>
+  <strong>Room type:</strong>
+  <%= @air.room_type %>
+</p>
+
+<p>
+  <strong>Is tv:</strong>
+  <%= @air.is_TV %>
+</p>
+
+<p>
+  <strong>Is air conditioning:</strong>
+  <%= @air.is_Air_Conditioning %>
+</p>
+
+<p>
+  <strong>Is laptop friendly workspace:</strong>
+  <%= @air.is_Laptop_friendly_workspace %>
+</p>
+
+<p>
+  <strong>Is washer:</strong>
+  <%= @air.is_Washer %>
+</p>
+
+<p>
+  <strong>Is kitchen:</strong>
+  <%= @air.is_Kitchen %>
+</p>
+
+<p>
+  <strong>Is wifi:</strong>
+  <%= @air.is_WiFi %>
+</p>
+
+<p>
+  <strong>Is family friendly:</strong>
+  <%= @air.is_Family_friendly %>
+</p>
+
+<p>
+  <strong>Is pool:</strong>
+  <%= @air.is_Pool %>
+</p>
+
+<p>
+  <strong>Is gym:</strong>
+  <%= @air.is_Gym %>
+</p>
+
+<p>
+  <strong>Is wheelchair accessible:</strong>
+  <%= @air.is_Wheelchair_accessible %>
+</p>
+
+<p>
+  <strong>Is pets allowed:</strong>
+  <%= @air.is_Pets_allowed %>
+</p>
+
+<p>
+  <strong>House rules:</strong>
+  <%= @air.house_rules %>
+</p>
+
+<%= link_to 'Edit', edit_air_path(@air) %> |
+<%= link_to 'Back', airs_path %>
