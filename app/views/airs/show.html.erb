@@ -50,57 +50,57 @@
 </p>
 
 <p>
-  <strong>Is tv:</strong>
+  <strong>TV:</strong>
   <%= @air.is_TV %>
 </p>
 
 <p>
-  <strong>Is air conditioning:</strong>
+  <strong>Air conditioning:</strong>
   <%= @air.is_Air_Conditioning %>
 </p>
 
 <p>
-  <strong>Is laptop friendly workspace:</strong>
+  <strong>Laptop friendly workspace:</strong>
   <%= @air.is_Laptop_friendly_workspace %>
 </p>
 
 <p>
-  <strong>Is washer:</strong>
+  <strong>Washer:</strong>
   <%= @air.is_Washer %>
 </p>
 
 <p>
-  <strong>Is kitchen:</strong>
+  <strong>Kitchen:</strong>
   <%= @air.is_Kitchen %>
 </p>
 
 <p>
-  <strong>Is wifi:</strong>
+  <strong>WiFi:</strong>
   <%= @air.is_WiFi %>
 </p>
 
 <p>
-  <strong>Is family friendly:</strong>
+  <strong>Family friendly:</strong>
   <%= @air.is_Family_friendly %>
 </p>
 
 <p>
-  <strong>Is pool:</strong>
+  <strong>Pool:</strong>
   <%= @air.is_Pool %>
 </p>
 
 <p>
-  <strong>Is gym:</strong>
+  <strong>Gym:</strong>
   <%= @air.is_Gym %>
 </p>
 
 <p>
-  <strong>Is wheelchair accessible:</strong>
+  <strong>Wheelchair accessible:</strong>
   <%= @air.is_Wheelchair_accessible %>
 </p>
 
 <p>
-  <strong>Is pets allowed:</strong>
+  <strong>Pets allowed:</strong>
   <%= @air.is_Pets_allowed %>
 </p>
 
@@ -108,6 +108,7 @@
   <strong>House rules:</strong>
   <%= @air.house_rules %>
 </p>
+Reviews  : <%= rating_for @air, 'review' %>
 
 <%= link_to 'Edit', edit_air_path(@air) %> |
 <%= link_to 'Back', airs_path %>

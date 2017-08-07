@@ -53,3 +53,7 @@ gem 'omniauth-facebook'
 
 gem 'rails_db'
 
+gem "jquery-slick-rails"
+
+gem 'ratyrate'
+

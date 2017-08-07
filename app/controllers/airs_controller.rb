@@ -4,7 +4,7 @@ class AirsController < ApplicationController
   # GET /airs
   # GET /airs.json
   def index
-    @airs = Air.all
+    @airs = Air.order('id DESC').all
   end
 
   # GET /airs/1
