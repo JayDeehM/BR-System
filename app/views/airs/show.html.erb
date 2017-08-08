@@ -15,6 +15,16 @@
 </p>
 
 <p>
+  <strong>Longitude:</strong>
+  <%= @air.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @air.latitude %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @air.description %>
 </p>
@@ -108,7 +118,12 @@
   <strong>House rules:</strong>
   <%= @air.house_rules %>
 </p>
+
 Reviews  : <%= rating_for @air, 'review' %>
+
+<div id="map"></div>
+    <script> initMap(<%= @air.latitude %>, <%= @air.longitude %>)</script>
+    
 
 <%= link_to 'Edit', edit_air_path(@air) %> |
 <%= link_to 'Back', airs_path %>

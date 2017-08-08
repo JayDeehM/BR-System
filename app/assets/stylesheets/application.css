@@ -16,3 +16,7 @@
  *= require slick-theme
  */
 
+#map {
+    height: 400px;
+    width: 100%;
+}

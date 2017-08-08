@@ -57,3 +57,4 @@ gem "jquery-slick-rails"
 
 gem 'ratyrate'
 
+gem 'geocoder'

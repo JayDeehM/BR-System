@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Airs</h1>
+<h1>Booking system</h1>
 
 <%= link_to 'New Air', new_air_path %>
 
     <% @airs.each do |air| %>
-    
       <div class="row">
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
@@ -20,7 +19,6 @@
           </div>
         </div>
       </div>
-    
     <% end %>
 
 <br>
