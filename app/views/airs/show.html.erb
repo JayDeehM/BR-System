@@ -125,14 +125,14 @@
 Reviews  : <%= rating_for @air, 'review' %>
 
   <h2>Book now!</h2>
-      <%= form_for([@air, @air.reservation.build]) do |f| %>
+      <%= form_for([@air, @air.reservations.build]) do |f| %>
         <p>
           <%= f.label :check_in %><br>
-          <%= f.date_select :check_in %>
+          <%= f.text_field :check_in %>
         </p>
         <p>
           <%= f.label :check_out %><br>
-          <%= f.date_select :check_out %>
+          <%= f.text_field :check_out %>
         </p>
         <p>
           <%= f.submit %>

@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
     def create
-        @air = Air.find(params[:room_id])
+        @air = Air.find(params[:air_id])
         @reservation = @air.reservations.create(reservation_params)
         redirect_to air_path(@air)
     end
