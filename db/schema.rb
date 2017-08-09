@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808032644) do
+ActiveRecord::Schema.define(version: 20170809104133) do
 
   create_table "airs", force: :cascade do |t|
     t.integer  "room_id"
@@ -87,6 +87,20 @@ ActiveRecord::Schema.define(version: 20170808032644) do
   end
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
+
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "check_in"
+    t.datetime "check_out"
+    t.integer  "price"
+    t.integer  "total_price"
+    t.integer  "air_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "reservations", ["air_id"], name: "index_reservations_on_air_id"
+  add_index "reservations", ["user_id"], name: "index_reservations_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  resources :airs
+  
+  resources :airs do
+    resources :reservations
+  end
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
   root 'airs#index'
   
 

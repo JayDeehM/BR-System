@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Edit', edit_air_path(@air) %> |
+<%= link_to 'Back', airs_path %>
+
 <p>
   <%= image_tag @air.image.url(:medium) %>
 </p>
@@ -121,9 +124,22 @@
 
 Reviews  : <%= rating_for @air, 'review' %>
 
+  <h2>Book now!</h2>
+      <%= form_for([@air, @air.reservation.build]) do |f| %>
+        <p>
+          <%= f.label :check_in %><br>
+          <%= f.date_select :check_in %>
+        </p>
+        <p>
+          <%= f.label :check_out %><br>
+          <%= f.date_select :check_out %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+    <% end %>
+
 <div id="map"></div>
     <script> initMap(<%= @air.latitude %>, <%= @air.longitude %>)</script>
     
 
-<%= link_to 'Edit', edit_air_path(@air) %> |
-<%= link_to 'Back', airs_path %>
